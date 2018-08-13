@@ -1,0 +1,41 @@
+.cc-content {
+    width: 500px !important;
+    text-align: left !important;
+    padding: .1rem 1rem .2rem .5!important;
+    margin-left: 1rem !important;
+    font-family: 'Roboto', serif;
+}
+.cc-content-text {
+    font-size: 1.2rem !important;
+    margin-bottom: .2rem !important;
+}
+.cc-card  {
+    background-color: #e2e2e2 !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 1rem 0 1.2rem 0 !important;
+}
+a.cc-content-link {
+    background-color: #91303C !important;
+    font-size: 1rem !important;
+    border-radius: 5px !important;
+    margin-bottom: 1rem !important;
+}
+a:hover.cc-content-link {
+    color: #ffffff !important;
+}
+.cc-content-title {
+    font-size: 1.8rem !important;
+    margin-top: .4rem !important;
+    margin-bottom: .1rem !important;
+}
+.cc-content-salary {
+    color:  #91303C !important;
+    font-size: 1.6rem !important;
+}
+.play-pause-button, .arrow-button {
+    display: none  !important;
+}
+.ihSeoB {
+    display: none !important;
+}

@@ -1,241 +1,13 @@
 <?php
-
-/*
- * Plugin Name: GCC Career Coach (EMSI) Shortcodes
- * Version: 1.0.0
- * Description: Custom shortcodes to output EMSI Career Coach Plugin to Pathway Pages.
- * Author: Germanna Marketing
- * Author URI: http://www.germanna.edu/
- * Tested up to: 4.9.8
- * Text Domain: gcc-wp-2018
- *
- * @package WordPress
- * @author Germanna
- * @since 1.0.0
- */
-//hooks
-//ccwidget shortcodes
-add_action( 'init', 'gcc_wp_2018_ccwidget_shortcodes');
-//career coach shortcodes
-//register the shortcodes
-function gcc_wp_2018_ccwidget_shortcodes() {
-    //business pathways
-
-    //[business_administration_ccwidget]
-    add_shortcode( 'business_administration_ccwidget', 'business_administration_ccwidget_shortcode');     //[business_management_ccwidget]
-    add_shortcode( 'business_management_ccwidget', 'business_management_ccwidget_shortcode');
-    //[accounting_ccwidget]
-    add_shortcode( 'accounting_ccwidget', 'accounting_ccwidget_shortcode');
-    //[business_core_ccwidget]
-    add_shortcode( 'business_core_ccwidget', 'business_core_ccwidget_shortcode');
-    //[entrepreneurship_ccwidget]
-    add_shortcode( 'entrepreneurship_ccwidget', 'entrepreneurship_ccwidget_shortcode');
-    //[supervision_ccwidget]
-    add_shortcode( 'supervision_ccwidget', 'supervision_ccwidget_shortcode');
-    //[allied_health_ccwidget]
-    add_shortcode( 'allied_health_ccwidget', 'allied_health_ccwidget_shortcode');
-    //[dental_assisting_ccwidget]
-    add_shortcode( 'dental_assisting_ccwidget', 'dental_assisting_ccwidget_shortcode');
-    //[expanded_dental_ccwidget]
-    add_shortcode( 'expanded_dental_ccwidget', 'expanded_dental_ccwidget_shortcode');
-    //[hpe_ccwidget]
-    add_shortcode( 'hpe_ccwidget', 'hpe_ccwidget_shortcode');
-    //[bsn_ccwidget]
-    add_shortcode( 'bsn_ccwidget', 'bsn_ccwidget_shortcode');
-    //[healthcare_technician_ccwidget]
-    add_shortcode( 'healthcare_technician_ccwidget', 'healthcare_technician_ccwidget_shortcode');
-    //[indirect_dental_ccwidget]
-    add_shortcode( 'indirect_dental_ccwidget', 'indirect_dental_ccwidget_shortcode');
-    //[lpn_ccwidget]
-    add_shortcode( 'lpn_ccwidget', 'lpn_ccwidget_shortcode');
-    //[nursing_ccwidget]
-    add_shortcode( 'nursing_ccwidget', 'nursing_ccwidget_shortcode');
-    //[personal_training_ccwidget]
-    add_shortcode( 'personal_training_ccwidget', 'personal_training_ccwidget_shortcode');
-    //[pharmacy_technician_ccwidget]
-    add_shortcode( 'pharmacy_technician_ccwidget', 'pharmacy_technician_ccwidget_shortcode');
-    //[pta_ccwidget]
-    add_shortcode( 'pta_ccwidget', 'pta_ccwidget_shortcode');
-    //[practical_nursing_ccwidget]
-    add_shortcode( 'practical_nursing_ccwidget', 'practical_nursing_ccwidget_shortcode');
-    //[restorative_dental_ccwidget]
-    add_shortcode( 'restorative_dental_ccwidget', 'restorative_dental_ccwidget_shortcode');
-    //[surgical_scrub_ccwidget]
-    add_shortcode( 'surgical_scrub_ccwidget', 'surgical_scrub_ccwidget_shortcode');
-}
-//business pathways (gcc_wp_2018_ccwidget_shortcodes)
-//
-//
-//business administration shortcode output
-function business_administration_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
-
-    <script type="text/javascript" async>
-      window.onload = function() {
-        var subdomain = 'germanna'; // subdomain
-        var level = 'county'; // state or county atm
-        var geoids = ['11001','24009','24017','24031','24033','24037','51003','51013','51033','51047','51057','51059','51061','51065','51075','51079','51085','51087','51097','51099','51101','51107','51109','51113','51137','51145','51153','51157','51159','51177','51179','51193','51510','51600','51610','51630','51683','51685','51760']; // state id or county ids, must be an array
-        var onets = ['11-1011.00', '11-1021.00', '11-2022.00', '11-3011.00', '11-3061.00', '11-3071.01', '11-3071.02', '11-3071.03', '11-9199.01', '11-9199.02', '11-9199.04', '11-9199.08', '13-1011.00', '13-1051.00', '13-1111.00', '13-1199.04', '15-1199.08', '43-1011.00', '43-6011.00', '43-9061.00']; // onets, must be an array
-        var legacy = false; //specify version, must be Boolean
-        ccWidget.render(subdomain, level, geoids, onets, legacy);
-      }
-    </script>
-
-<?php
-
-$output = '
-
-<div id="cc-widget-careers"></div>
-';
-return $output;
-}
-//business management shortcode output
-function business_management_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
-
-    <script type="text/javascript" async>
-      window.onload = function() {
-        var subdomain = 'germanna'; // subdomain
-        var level = 'county'; // state or county atm
-        var geoids = ['11001','24009','24017','24031','24033','24037','51003','51013','51033','51047','51057','51059','51061','51065','51075','51079','51085','51087','51097','51099','51101','51107','51109','51113','51137','51145','51153','51157','51159','51177','51179','51193','51510','51600','51610','51630','51683','51685','51760']; // state id or county ids, must be an array
-        var onets = ['11-1011.00', '11-1021.00', '11-2022.00', '11-3011.00', '11-3061.00', '11-3071.01', '11-3071.02', '11-3071.03', '11-9199.01', '11-9199.02', '11-9199.04', '11-9199.08', '13-1011.00', '13-1051.00', '13-1111.00', '13-1199.04', '15-1199.08', '43-1011.00', '43-6011.00', '43-9061.00']; // onets, must be an array
-        var legacy = false; //specify version, must be Boolean
-        ccWidget.render(subdomain, level, geoids, onets, legacy);
-      }
-    </script>
-
-<?php
-
-$output = '
-
-<div id="cc-widget-careers"></div>
-';
-return $output;
-
-}
-//accounting shortcode output
-function accounting_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
-
-    <script type="text/javascript" async>
-    window.onload = function() {
-      var subdomain = 'germanna'; // subdomain
-      var level = 'county'; // state or county atm
-      var geoids = ['11001','24009','24017','24031','24033','24037','51003','51013','51033','51047','51057','51059','51061','51065','51075','51079','51085','51087','51097','51099','51101','51107','51109','51113','51137','51145','51153','51157','51159','51177','51179','51193','51510','51600','51610','51630','51683','51685','51760']; // state id or county ids, must be an array
-      var onets = ['11-3031.01', '11-3031.02', '13-2011.01', '13-2011.02', '13-2031.00', '13-2041.00', '13-2051.00', '13-2061.00', '13-2081.00', '13-2082.00', '43-3031.00', '43-3051.00', '43-4011.00', '43-9111.00']; // onets, must be an array
-      var legacy = false; //specify version, must be Boolean
-      ccWidget.render(subdomain, level, geoids, onets, legacy);
-    }
-    </script>
-
-<?php
-
-$output = '
-
-<div id="cc-widget-careers"></div>
-
-';
-return $output;
-}
-//business core shortcode output
-function business_core_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
-
-    <script type="text/javascript" async>
-    window.onload = function() {
-      var subdomain = 'germanna'; // subdomain
-      var level = 'county'; // state or county atm
-      var geoids = ['11001','24009','24017','24031','24033','24037','51003','51013','51033','51047','51057','51059','51061','51065','51075','51079','51085','51087','51097','51099','51101','51107','51109','51113','51137','51145','51153','51157','51159','51177','51179','51193','51510','51600','51610','51630','51683','51685','51760']; // state id or county ids, must be an array
-      var onets = ['11-1011.00', '11-1021.00', '11-2022.00', '11-3011.00', '11-3051.00', '11-3071.01', '11-3071.02', '11-9021.00', '11-9151.00', '11-9199.01', '11-9199.02', '11-9199.04', '11-9199.08', '13-1051.00', '13-1111.00', '13-1121.00', '13-1199.04', '15-1199.08']; // onets, must be an array
-      var legacy = false; //specify version, must be Boolean
-      ccWidget.render(subdomain, level, geoids, onets, legacy);
-    }
-    </script>
-
-<?php
-
-$output = '
-
-<div id="cc-widget-careers"></div>
-
-';
-return $output;
-}
-//entrepreneurship shortcode output
-function entrepreneurship_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
-
-    <script type="text/javascript" async>
-    window.onload = function() {
-      var subdomain = 'germanna'; // subdomain
-      var level = 'county'; // state or county atm
-      var geoids = ['11001','24009','24017','24031','24033','24037','51003','51013','51033','51047','51057','51059','51061','51065','51075','51079','51085','51087','51097','51099','51101','51107','51109','51113','51137','51145','51153','51157','51159','51177','51179','51193','51510','51600','51610','51630','51683','51685','51760']; // state id or county ids, must be an array
-      var onets = ['11-1011.00', '11-1021.00', '11-9199.04', '13-1131.00', '13-1199.04', '13-1199.06', '13-2099.02', '15-1199.08', '15-1199.10']; // onets, must be an array
-      var legacy = false; //specify version, must be Boolean
-      ccWidget.render(subdomain, level, geoids, onets, legacy);
-    }
-    </script>
-
-<?php
-
-$output = '
-
-<div id="cc-widget-careers"></div>
-
-';
-return $output;
-}
-//entrepreneurship shortcode output
-function supervision_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
-
-    <script type="text/javascript" async>
-      window.onload = function() {
-        var subdomain = 'germanna'; // subdomain
-        var level = 'county'; // state or county atm
-        var geoids = ['11001','24009','24017','24031','24033','24037','51003','51013','51033','51047','51057','51059','51061','51065','51075','51079','51085','51087','51097','51099','51101','51107','51109','51113','51137','51145','51153','51157','51159','51177','51179','51193','51510','51600','51610','51630','51683','51685','51760']; // state id or county ids, must be an array
-        var onets = ['11-1021.00', '11-3051.00', '11-3051.01', '11-3061.00', '11-3071.03', '11-9199.04', '11-9199.08', '13-1075.00', '13-1081.00', '13-1081.02', '13-1111.00', '13-1199.04', '15-2031.00', '19-4099.01']; // onets, must be an array
-        var legacy = false; //specify version, must be Boolean
-        ccWidget.render(subdomain, level, geoids, onets, legacy);
-      }
-    </script>
-
-<?php
-
-$output = '
-
-<div id="cc-widget-careers"></div>
-
-';
-return $output;
-}
-
 //Health and Sciences Pathways shortcodes
 //allied Health shortcode $output
 
 function allied_health_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+   //setup our output variable - the emsi script
+   wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+   wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+   wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -260,10 +32,11 @@ return $output;
 //dental assisting shortcode $output
 
 function dental_assisting_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+   //setup our output variable - the emsi script
+   wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+   wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+   wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -288,10 +61,11 @@ return $output;
 //expanded dental shortcode $output
 
 function expanded_dental_ccwidget_shortcode ($args, $content="") {
-
-    //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+   //setup our output variable - the emsi script
+   wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+   wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+   wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -316,10 +90,11 @@ return $output;
 //hpe shortcode $output
 
 function hpe_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -344,10 +119,11 @@ return $output;
 //bsn shortcode $output
 
 function bsn_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -372,10 +148,11 @@ return $output;
 //healthcare technician shortcode $output
 
 function healthcare_technician_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+ ?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -400,10 +177,11 @@ return $output;
 //indirect dental shortcode $output
 
 function indirect_dental_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -420,7 +198,7 @@ function indirect_dental_ccwidget_shortcode ($args, $content="") {
 
 $output = '
 
-<div id="cc-widget-careers"></div>
+<div id="cc-widget-careers" style="width: 100%;"></div>
 
 ';
 return $output;
@@ -428,10 +206,11 @@ return $output;
 //lpn shortcode $output
 
 function lpn_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -456,10 +235,11 @@ return $output;
 //nursing shortcode $output
 
 function nursing_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -484,10 +264,11 @@ return $output;
 //personal training shortcode $output
 
 function personal_training_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -512,10 +293,11 @@ return $output;
 //pharmacy technician shortcode $output
 
 function pharmacy_technician_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -540,10 +322,11 @@ return $output;
 //pta shortcode $output
 
 function pta_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -568,10 +351,11 @@ return $output;
 //practical nursing shortcode $output
 
 function practical_nursing_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -596,10 +380,11 @@ return $output;
 //restorative dental shortcode $output
 
 function restorative_dental_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
@@ -624,10 +409,11 @@ return $output;
 //surgical scrub shortcode $output
 
 function surgical_scrub_ccwidget_shortcode ($args, $content="") {
-
     //setup our output variable - the emsi script
-    wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js');
-    wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css');  ?>
+wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');
+wp_enqueue_style ( 'ccwidget-custom-styles', plugins_url( '/career-coach/dist/css/custom-widget-styles.css'), array(),'1.0.0','all');
+wp_enqueue_script('ccwidget-script', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.js', array(), '1.0.0', true );
+?>
 
     <script type="text/javascript" async>
       window.onload = function() {
