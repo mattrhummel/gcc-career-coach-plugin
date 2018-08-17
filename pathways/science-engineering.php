@@ -61,7 +61,7 @@ $output = '
 return $output;
 };
 //engineering mechanical shortcode output
-function ee_mechanical_shortcode ($args, $content="") {
+function em_ccwidget_shortcode ($args, $content="") {
 
       //setup our output variable - the emsi script
       wp_enqueue_style( 'ccwidget-styles', 'https://s3-us-west-2.amazonaws.com/cc-widget-v2/ccWidget.css',  array(),'1.0.0','all');

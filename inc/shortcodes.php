@@ -80,7 +80,7 @@ function gcc_wp_2018_ccwidget_shortcodes() {
     add_shortcode( 'networking_ccwidget', 'networking_ccwidget_shortcode');
     //public service shortcodes
     //[gs_adj_ccwidget]
-    add_shortcode( 'adj_ccwidget', 'adj_ccwidget_shortcode');
+    add_shortcode( 'gs_adj_ccwidget', 'gs_adj_ccwidget_shortcode');
     //[adj_ccwidget_ccwidget]
     add_shortcode( 'adj_ccwidget', 'adj_ccwidget_shortcode');
     //[adj_certificate_ccwidget]
@@ -98,8 +98,8 @@ function gcc_wp_2018_ccwidget_shortcodes() {
     add_shortcode( 'science_ccwidget', 'science_ccwidget_shortcode');
     //[ee_ccwidget]
     add_shortcode( 'ee_ccwidget', 'ee_ccwidget_shortcode');
-    //[ee_ccwidget]
-    add_shortcode( 'ee_ccwidget', 'ee_mechanical_shortcode');
+    //[em_ccwidget]
+    add_shortcode( 'em_ccwidget', 'em_ccwidget_shortcode');
     //[et_csc_ccwidget]
     add_shortcode( 'et_csc_ccwidget', 'et_csc_ccwidget_shortcode');
     //social science & education shortcodes

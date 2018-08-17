@@ -106,7 +106,7 @@ Short code plugin to output EMSIs Career Coach html plugin file.
 
 [ee_ccwidget]
 
-[ee_ccwidget]
+[em_ccwidget]
 
 [et_csc_ccwidget]
 
