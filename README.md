@@ -88,7 +88,7 @@ Short code plugin to output EMSIs Career Coach html plugin file.
 
 [gs_adj_ccwidget]
 
-[adj_ccwidget_ccwidget]
+[adj_ccwidget]
 
 [adj_certificate_ccwidget]
 
@@ -102,7 +102,7 @@ Short code plugin to output EMSIs Career Coach html plugin file.
 
 ### Science & Engineering Pathways
 
-[science_ccwidget_ccwidget]
+[science_ccwidget]
 
 [ee_ccwidget]
 
