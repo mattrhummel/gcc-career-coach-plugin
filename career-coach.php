@@ -6,11 +6,11 @@
  * Description: Custom shortcodes to output EMSI Career Coach Plugin to Pathway Pages.
  * Author: Germanna Marketing
  * Author URI: http://www.germanna.edu/
- * Tested up to: 4.9.8
+ * Tested up to: 4.9.9
  * Text Domain: gcc-wp-2018
  *
  * @package WordPress
- * @author Germanna
+ * @author Germanna Marketing
  * @since 1.0.0
  */
 //hooks
