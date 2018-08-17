@@ -40,4 +40,7 @@ require_once "pathways/business-pathways.php";
 require_once "pathways/health-pathways.php";
 require_once "pathways/humanities-pathways.php";
 require_once "pathways/it-pathways.php";
+require_once "pathways/public-service.php";
+require_once "pathways/science-engineering.php";
+require_once "pathways/social-science-education.php";
 ?>
