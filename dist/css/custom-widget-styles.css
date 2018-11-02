@@ -1,9 +1,10 @@
 .cc-content {
-    width: 500px !important;
+    width: 220px !important;
     text-align: left !important;
     padding: .1rem 1rem .2rem .5!important;
     margin-left: 1rem !important;
     font-family: 'Roboto', serif;
+    position: relative;
 }
 .cc-content-text {
     font-size: 1.2rem !important;
@@ -20,6 +21,7 @@ a.cc-content-link {
     font-size: 1rem !important;
     border-radius: 5px !important;
     margin-bottom: 1rem !important;
+    color: #ffffff !important;
 }
 a:hover.cc-content-link {
     color: #ffffff !important;
@@ -38,4 +40,12 @@ a:hover.cc-content-link {
 }
 .ihSeoB {
     display: none !important;
+}
+
+
+@media screen and (min-width: 40em) {
+
+    .cc-content {
+        width: 500px !important;
+}
 }

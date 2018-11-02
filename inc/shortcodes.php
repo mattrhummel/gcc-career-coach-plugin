@@ -114,7 +114,7 @@ function gcc_wp_2018_ccwidget_shortcodes() {
     //[ecd_certificate_ccwidget]
     add_shortcode( 'ecd_certificate_ccwidget', 'ecd_certificate_ccwidget_shortcode');
     //[ge_certificate_ccwidget]
-    add_shortcode( 'ge_certificate_ccwidget', 'ge_certificate_ccwidget_shortcod');
+    add_shortcode( 'ge_certificate_ccwidget', 'ge_certificate_ccwidget_shortcode');
     //[ecd_csc_ccwidget]
     add_shortcode( 'ecd_csc_ccwidget', 'ecd_csc_ccwidget_shortcode');
 }

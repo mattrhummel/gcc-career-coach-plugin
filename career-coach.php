@@ -17,21 +17,6 @@
 //ccwidget shortcodes
 add_action( 'init', 'gcc_wp_2018_ccwidget_shortcodes');
 
-//defer emsi plugin scripts to help with page load
-//add async to js
-function add_defer_cc_attribute($tag, $handle) {
-   // add script handles to the array below
-   $scripts_to_defer = array('ccwidget-script');
-
-   foreach($scripts_to_defer as $defer_script) {
-      if ($defer_script === $handle) {
-         return str_replace(' src', ' defer src', $tag);
-      }
-   }
-   return $tag;
-}
-add_filter('script_loader_tag', 'add_defer_cc_attribute', 10, 2);
-
 //function that creates the shortcodes for the page
 require_once "inc/shortcodes.php";
 
